@@ -1,0 +1,19 @@
+
+<block wx:for="{{list}}">
+   <view class="list-item flex-ll" bindtap="playmusic" data-item="{{item}}">
+       <image src="{{item.img}}" class=""></image>
+       <view>
+            <view>{{item.name}}</view>
+            <view class="author"> {{item.author}}</view>
+       </view>
+   </view>
+</block>
+
+
+
+<audio  poster="{{listItem.poster}}" name="{{listItem.name}}" author="{{listItem.author}}" src="{{listItem.src}}"
+ id="myAudio" controls loop>
+</audio>
+<!-- <button  class="button-green" bindtap="audioPlay">播放</button>
+<button  class="button-green" bindtap="audioPause">暂停</button>
+<button  class="button-green" bindtap="audioStart">回到开头</button> -->

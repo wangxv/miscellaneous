@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠区域</title>
+    <style type="text/css">
+        body{
+            color:#fff;
+            background:#fff;
+            margin:50px;
+            font-family:"Helvetica Neue",sans-serif;
+        }
+        #collapse{
+            width:450px;
+        }
+        #collapse article{
+            width:450px;
+            background:#385986;
+            border-bottom:1px solid rgba(255,255,255,.3);
+        }
+        #collapse h1{
+            background:#8e44ad;
+            height:70px;
+            line-height:30px;
+            text-indent:30px;
+            margin:0;
+            font-size:24px;
+            position:relative;
+            cursor:pointer;
+            transition:all .5s;
+            -webkit-transition: all .5s;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #collapse h1:hover{
+            background:#6e208e;
+        }
+        #collapse h1::after{
+            content:"";
+            width:0;
+            height:0;
+            border-width:7px;
+            border-style:solid;
+            position:absolute;
+            border-color:#fff transparent transparent transparent;
+            right:20px;
+            top:35px;
+        }
+        #collapse h1.hide::after{
+            border-color:transparent #fff transparent transparent;
+            right:22px;
+            top:30px;
+        }
+        #collapse p{
+            margin:0;
+            padding:30px;
+            color:rgba(255,255,255,.85);
+        }
+        #collapse p.hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<section id="collapse">
+    <article>
+        <h1>Duls quistor</h1>
+        <p>In hendrerit orci est, in lacinia diam suscipit a. Phasellus pulvinar lectus augue, vitae semper
+            tortor ornare sit amet. Aliquam porttitor posuere turpis at volutpat. Aliquam non tellus cursus,
+            interdum tortor non, scelerisque mi. Maecenas id nisi imperdiet, pellentesque dui congue,
+            sollicitudin erat. Quisque finibus, sapien ut dapibus imperdiet, mauris ex feugiat sem, vel
+            tempor ligula tellus quis mi.
+        </p>
+
+    </article>
+    <article>
+        <h1>Aenean libero</h1>
+        <p>Ut auctor tincidunt sapien, eget pulvinar est tincidunt eu. Vivamus nisl quam, porta at nisi eget,
+            laoreet tincidunt dui. Cras ac tortor a elit pretium hendrerit in non justo. Nullam vestibulum,
+            lorem in lacinia facilisis, sem mauris tempus nisi,
+            eget dignissim elit dui et quam. Curabitur imperdiet lectus orci, eget mollis velit euismod id.
+        </p>
+    </article>
+    <article>
+        <h1>Vestibulum</h1>
+        <p>Duis in lobortis odio, nec tincidunt sem. Cras nibh lorem, sodales a mattis eu, dignissim placerat
+            lacus. Nullam neque dui, euismod vitae egestas sed, feugiat quis tellus. Duis aliquet velit eget ligula
+            lobortis, a maximus orci imperdiet. Pellentesque dictum eleifend lobortis. Sed dignissim viverra arcu,
+            id tristique nunc. Integer sit amet dapibus nisl.
+        </p>
+    </article>
+</section>
+
+<script type="text/javascript">
+    var title=document.getElementsByTagName("h1");
+    var article=document.getElementsByTagName("article");
+
+    foldAll();
+    function foldAll() {
+        for (var i = 0; i < title.length; i++) {
+            article[i].getElementsByTagName("p")[0].className = "hide";
+            title[i].className = "hide";
+        }
+    }
+        for(var i=0;i<title.length;i++){
+            title[i].onclick=function(){
+                refreshCollopse(this);
+            }
+        }
+        function refreshCollopse(obj){
+            var targClass;
+            //根据被点击对象的当前页状态判断接下来是哟啊展开还是折叠该区域，将目标存储在targClass中
+            if(obj.className=="hide"){
+                targClass="";
+            }else{
+                targClass="hide";
+            }
+            //折叠所有区域
+           // foldAll();
+            //然后展开或折叠当前被点击区域
+            obj.parentNode.getElementsByTagName("p")[0].className=targClass;
+            obj.className=targClass;
+
+    }
+</script>
+</body>
+</html>

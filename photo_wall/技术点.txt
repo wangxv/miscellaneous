@@ -1,0 +1,16 @@
+      关键技术点
+      
+1.box-shadow：给元素的边框添加阴影的效果
+语法：box-shadow:X轴偏移量 Y轴偏移量[阴影模糊半径][阴影扩展半径][阴影颜色][投影方式]
+2.positon:给元素定位，主要用到绝对定位
+用法：position:absolute与posistion:relative配合使用实现相对于包含元素（参照元素）定位
+3.z-index：整数 设置元素的上下层显示顺序
+注意：拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面
+4.transform：使元素变形的属性，其配合rotate（旋转角度），scale（缩放倍数），skew(扭曲元素)
+等参数一起使用
+
+transform:rotate(旋转角度)
+transform:scale(缩放倍数)
+
+5.transition:设置
+元素由样式1转变为样式2的过程duration

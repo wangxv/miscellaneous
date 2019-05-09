@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="top250Ctrl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>正在热映</title>
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../css/in_theaters.css">
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <ul>
+            <li ng-repeat="x in data" class="item" ng-click="showChange()">
+
+                <div class="wrapper">
+                 <div>
+                    <img src="{{x.images.small}}" alt="" class="img">
+                </div>
+                <div class="content">
+                    <div class="year">{{x.year}}</div>
+                    <div class="title">{{x.title}}</div>
+                    <div class="genres">
+                        <ul>
+                            <li ng-repeat="y in x.genres">
+                                {{y}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            </li>
+        </ul>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-animate.min.js"></script>
+    <script src="../public/js/app.js"></script>
+    <script src="../js/in_theaters.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>电话簿</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="phonebook">
+
+        <!-- 联系人列表 -->
+        <ul id="list">
+        </ul>
+
+        <!-- 新建联系人按钮-->
+        <div class="addperson">
+            新建联系人
+        </div>
+        
+
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <ul>
+                <li class="alphabet">A</li>
+                <li class="alphabet">B</li>
+                <li class="alphabet">C</li>
+                <li class="alphabet">D</li>
+                <li class="alphabet">E</li>
+                <li class="alphabet">F</li>
+                <li class="alphabet">G</li>
+                <li class="alphabet">H</li>
+                <li class="alphabet">I</li>
+                <li class="alphabet">J</li>
+                <li class="alphabet">K</li>
+                <li class="alphabet">L</li>
+                <li class="alphabet">M</li>
+                <li class="alphabet">N</li>
+                <li class="alphabet">O</li>
+                <li class="alphabet">P</li>
+                <li class="alphabet">Q</li>
+                <li class="alphabet">R</li>
+                <li class="alphabet">S</li>
+                <li class="alphabet">T</li>
+                <li class="alphabet">U</li>
+                <li class="alphabet">V</li>
+                <li class="alphabet">W</li>
+                <li class="alphabet">X</li>
+                <li class="alphabet">Y</li>
+                <li class="alphabet">Z</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 用户详情 -->
+    <div id="detail">
+        <div class="detail-message"></div>
+        <button class="detail-btn" id="detail-change">修改</button>
+        <button class="detail-btn ">返回</button>
+    </div>
+    
+     <!-- 新建联系人弹窗 -->
+         <div class="addpop">
+             <div class="wrap">
+                 姓名：<input type="text" class=" input-message" id="name"><br/><br/>
+                 电话：<input type="text" class="input-message" id="telephone"><br/><br/>
+                 地址：<input type="text" class="input-message" id="address"><br/><br/>
+                 备注：<input type="text" class="input-message" id="intro"><br/><br/>
+
+                 <button class="fun-btn save">保存</button>
+                 <button class="fun-btn exit">退出</button>
+             </div>
+         </div>
+
+
+    <script src="libs/jquery.min.js"></script>
+    <script src="js/data1.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

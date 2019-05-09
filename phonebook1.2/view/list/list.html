@@ -1,0 +1,12 @@
+<!-- 联系人列表 -->
+<ul id="list">
+    <li class="group clearfix" ng-repeat="(x,y) in arr">
+        <div class="group-name" ng-if="y.length>0">{{x}}</div>
+        <ul class="group-person">
+            <li class="person clearfix" ng-repeat="z in y">
+                <img src="public/imgs/user.png" class="img" alt="">
+                <span class="name">{{z.name}}</span>
+            </li>
+        </ul>
+    </li>
+</ul>

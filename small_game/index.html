@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5微信小游戏</title>
+    <meta name="viewport" content="width=device-width,initial-scale= 1.0 ,maximum-scale=1.0,
+            user-scalable=0"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="loading">加载中...</div>
+<div id="scene1">
+    <div id="heart" class="slogan-img">爱心</div>
+    <div id="t0" class="slogan-img">520</div>
+    <div id="t1" class="slogan-img">这真是个适合表达爱意的日子</div>
+    <div id="t2" class="slogan-img">你爱的是谁？</div>
+    <div id="sbtn" class="slogan-img">马上测一测！</div>
+</div>
+<div id="scene2">
+    <div id="t3" class="slogan-text">请不断点击屏幕，发现你最爱的TA</div>
+    <div id="lbtn" class="slogan-img">爱在华师大</div>
+</div>
+<div id="scene3">
+    <div id="t4" class="slogan-img">ECNU</div>
+    <div id="t5" class="slogan-img">师大学子的一生牵绊</div>
+    <div id="t6" class="slogan-img">520说爱你</div>
+    <div id="t7" class="slogan-text">520，我们的微信服务平台上线了<br>更多更好的服务等着你！</div>
+    <div id="ercode"><img src="imgs/ercode.png" width="142" height="142" alt="二维码"/></div>
+</div>
+<div id="musicplayer">
+    <button id="musicon" class="hidden"></button>
+    <button id="musicoff"></button>
+    <audio src="loop.mp3" loop id="music"></audio>
+</div>
+
+<script src="js/TweenMax.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    /*border:1px solid #ccc;*/
+    font-size: 14px;
+}
+
+.alphabet {
+    width: 40px;
+    height: 23px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#list {
+    font-size: 16px;
+    margin-bottom:60px;
+}
+/*添加按钮*/
+.addperson{
+   width:150px;
+   height:40px;
+   border-radius: 20px;
+   background:green;
+   color:#fff;
+   text-align: center;
+   line-height: 40px;
+   position:fixed;
+   bottom:5px;
+   font-size:18px;
+}
+/*分组*/
+
+.group {}
+
+.group-name {
+    font-size: 18px;
+    float: left;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.group-person {
+    float: left;
+}
+
+.person {
+
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.person .img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    float: left;
+    border-radius: 50%;
+    background: #000;
+    border: none;
+}
+
+.person .name {
+    width: 240px;
+    float: left;
+    margin-left: 10px;
+    border-bottom: 1px solid #E3E3E0;
+}
+
+
+/*联系人详情*/
+#detail {
+    height: 100%;
+    margin-left: 20px;
+    line-height: 70px;
+    margin-top: 30px;
+    margin-right: 10px;
+    display: none;
+    text-align: center;
+}
+
+.detail-name,.detail-tenumber,.detail-address, .detail-intro{
+    font-size: 18px;
+    text-align: left;
+}
+
+.detail-input{
+  width:200px;
+  height:50px;
+  line-height: 50px;
+  border:1px solid #ccc;
+  padding:5px;
+  margin:5px;
+  font-size:16px;
+}
+.detail-textarea{
+  height:160px;
+  border:1px solid #ccc;
+  padding:5px;
+  font-size:16px;
+  line-height: 20px;
+}
+
+/*新建联系人按钮*/
+.detail-btn {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background: green;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+/*新建联系人弹窗*/
+.addpop{
+   display:none;
+   font-size:18px;
+   background:#000;
+   opacity: 0.5;
+   filter: alpha(opacity=0.5);
+   position:relative;
+
+}
+
+.wrap{
+	width:89%;
+	padding:20px;
+	background:#fff;
+	margin-top:115px;
+	height:300px;
+	position:absolute;
+	border-right: 5px solid #fff;
+}
+.input-message{
+  border:1px solid #ccc;
+  width:220px;
+  height:40px;
+  line-height: 40px;
+  font-size:16px;
+}
+.fun-btn{
+	width:60px;
+	height:40px;
+    border-radius: 5px;
+    background: green;
+    text-align: center;
+    line-height: 20px;
+    font-size:16px;
+    color:#fff;
+    margin-left:70px;
+}

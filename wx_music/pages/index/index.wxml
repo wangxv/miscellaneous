@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">音乐播放器</view>
+  <image src="../imgs/bg2.jpg" ></image>
+  <button class="btn-green" bindtap="into">点击进入</button>
+
+  <button class="imgshow" bindtap="showimg">图片展示</button>
+</view>

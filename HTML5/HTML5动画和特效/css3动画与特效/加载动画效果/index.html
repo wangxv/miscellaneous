@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加载动画效果</title>
+    <style>
+        body{
+            background:#43A980;
+            margin:50px;
+        }
+       .loader{
+           text-align: center;
+           position:relative;
+           width:200px;
+           height:200px;
+           box-shadow:inset 0 0 0 15px #FFF;
+           border-radius:50%;
+           background:#fff;
+           background:linear-gradient(left,#fff 10%,rgba(255,255,255,0) 50%);
+           background:-webkit-linear-gradient(left,#fff 10%,rgba(255,255,255,0) 50%);
+           -webkit-animation: load-effect 2s infinite linear;
+           -o-animation: load-effect 2s infinite linear;
+           animation: load-effect 2s infinite linear;
+           box-shadow:inset 0 0 0 20px rgba(255,255,255,.2);
+       }
+        .loader::before{
+            position:absolute;
+            content:'';
+            width:50%;
+            height:50%;
+            background:#FFF;
+            border-radius:100% 0 0 0;
+            left:0px;
+            top:0px;
+        }
+        .loader::after{
+            background:#43A980;
+            position:absolute;
+            content:'';
+            width:160px;
+            height:160px;
+            border-radius:50%;
+            left:0;
+            box-shadow:inset 0 0 0 15px rgba(255,255,255,.2);
+            top:20px;
+            left:20px;
+        }
+        @-webkit-keyframes load-effect {
+            0%{
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes load-effect {
+            0%{
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+  <div class="loader">Loading...</div>
+</body>
+</html>

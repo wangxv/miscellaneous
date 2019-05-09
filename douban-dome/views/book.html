@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="bookCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>book</title>
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="book clearfix">
+        <!-- 搜索框 -->
+        <input type="text" ng-model="bookName" class="search" placeholder="请输入书名">
+        <div class="search-botton" ng-click="searchBook()">搜索</div>
+    </div>
+    <div class=" detail">
+        <div class="wrapper">
+            <ul class="search-list">
+                <li ng-repeat="x in data" class="item" ng-click="showBook(x)">
+                    {{x.title}}
+                </li>
+            </ul>
+        </div>
+        <div class="content clearfix">
+            <div class="left float-l">
+                <img src="{{book.image}}" alt="" class="img" ng-if="imgShow">
+                <div>{{book.title}}</div>
+                <div>{{book.price}}</div>
+                <div>{{book.pubdata}}</div>
+                <div>{{book.publisher}}</div>
+            </div>
+            <div class="center float-l"></div>
+            <div class="right float-l">
+                <div>
+                    <div>{{book.subtitle}}</div>
+                    <div class=" summary">{{book.summary}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+    <script type="text/javascript" src="../public/js/app.js"></script>
+    <script type="text/javascript" src="../public/js/book.js"></script>
+    
+</body>
+</html>

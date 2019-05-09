@@ -1,0 +1,20 @@
+/**index.wxss**/
+
+.title{
+  font-size:48rpx;
+  margin-bottom:80rpx;
+  color:#4BE348;
+}
+image{
+  width:100%;
+  margin-bottom:80rpx;
+}
+.btn-green{
+  background:#D3F0C6;
+  color:#666;
+}
+.imgshow{
+  margin-right:4rpx;
+  background:#F7E0F7;
+  margin-top:20rpx;
+}

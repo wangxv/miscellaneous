@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图标元素动画效果</title>
+    <style>
+        .box{
+            width:150px;
+            height:150px;
+            background:#8b8ab3;
+        }
+        @font-face {
+            font-family: 'icon-font';
+            src: url('font/flat-ui-icons-regular.ttf'), url('font/flat-ui-icons-regular.eot'), url('font/flat-ui-icons-regular.woff'), url('font/flat-ui-icons-regular.svg');
+        }
+        .close{
+            font-size:0px;
+            cursor:pointer;
+            display:block;
+            width:100px;
+            height:100px;
+            line-height:100px;
+            border-radius:50%;
+            background:#fff;
+            color:#8b8ab3;
+            text-align:center;
+        }
+        .close::before{
+            content:"\e609";
+            font-family:'icon-font';
+            speak:none;
+            font-size: 48px;
+            display:block;
+        }
+        .close:hover::before{
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+            transition:transform 1s linear;
+        }
+        @keyframes spin{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        @-webkit-keyframes spin {
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+  <span class="close">Close</span>
+</div>
+</body>
+</html>

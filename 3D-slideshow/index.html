@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>3D轮播切换</title>
+    <meta name="keywords" content="3D轮播切换" />
+    <meta name="description" content="描述网页" />
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* banner */
+
+    #banner {
+        width: 790px;
+        height: 420px;
+        background: #000;
+        margin: 50px auto;
+        position: relative;
+    }
+    /* 图片列表 */
+
+    #banner ul li {
+        position: absolute;
+        list-style: none;
+        width: 240px;
+        height: 420px;
+        /*border: 2px solid red;*/
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    #banner ul li:nth-child(1) {
+        width: 380px;
+        height: 620px;
+        left: 205px;
+        top: -100px;
+        z-index: 10;
+        opacity: 1;
+    }
+
+    #banner ul li:nth-child(2) {
+
+        left: 0px;
+        top: 0px;
+    }
+
+    #banner ul li:nth-child(5) {
+        left: 550px;
+        top: 0;
+    }
+
+    #banner ul li.center {
+        left: 275px;
+    }
+
+    #banner ul li img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn div {
+
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 70px;
+        line-height: 70px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .btn #btn-left {
+        left: 0;
+    }
+
+    .btn #btn-right {
+        right: 0;
+    }
+
+    .btn div:hover {
+        background: #666;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 轮波图 -->
+    <div id="banner">
+        <ul>
+            <li><img src="imgs/view1.jpg" alt=""></li>
+            <li><img src="imgs/view2.jpg" alt=""></li>
+            <li class="center"><img src="imgs/view3.jpg" alt=""></li>
+            <li class="center"><img src="imgs/view4.jpg" alt=""></li>
+            <li><img src="imgs/view5.jpg" alt=""></li>
+        </ul>
+        <div class="btn">
+            <div id="btn-left">
+                < </div>
+                    <div id="btn-right">
+                        >
+                    </div>
+            </div>
+        </div>
+        <script src="jq.js"></script>
+        <script type="text/javascript">
+        console.log($)
+        if (!$) {
+            var btnLeft = document.getElementById("btn-left");
+
+            var btnRight = document.getElementById("btn-right");
+
+            // 往左轮播
+            btnLeft.onclick = function() {
+
+                change(0);
+            }
+            // 往右轮播
+            btnRight.onclick = function() {
+
+                change(1);
+            }
+
+
+
+            //交换函数
+            function change(direction) {
+                //宽 高 left  top 层级 透明度
+                var arrW = [],
+                    arrH = [],
+                    arrL = [],
+                    arrT = [],
+                    arrZ = [],
+                    arrO = [];
+
+                var li = document.getElementsByTagName("li");
+                for (var i = 0; i < li.length; i++) {
+                    arrW[i] = getComputedStyle(li[i], false).width;
+                    arrH[i] = getComputedStyle(li[i], false).height;
+                    arrL[i] = getComputedStyle(li[i], false).left;
+                    arrT[i] = getComputedStyle(li[i], false).top;
+                    arrZ[i] = getComputedStyle(li[i], false).zIndex;
+                    arrO[i] = getComputedStyle(li[i], false).opacity;
+
+                }
+
+                //往左
+                for (var i = 0; i < li.length; i++) {
+                    var index;
+                    if (direction == 0) {
+                        index = i - 1;
+                        if (index < 0) {
+                            index = 4;
+                        }
+                        li[i].style.width = arrW[index]
+
+                        li[i].style.height = arrH[index]
+                        li[i].style.left = arrL[index]
+                        li[i].style.top = arrT[index]
+                        li[i].style.zIndex = arrZ[index]
+                        li[i].style.opacity = arrO[index]
+
+                    } else {
+                        index = i + 1;
+                        if (index > 4) {
+                            index = 0;
+                        }
+                        li[i].style.width = arrW[index]
+                        li[i].style.height = arrH[index]
+                        li[i].style.left = arrL[index]
+                        li[i].style.top = arrT[index]
+                        li[i].style.zIndex = arrZ[index]
+                        li[i].style.opacity = arrO[index]
+                    }
+                }
+
+            }
+        } else {
+
+            var btnLeft = $("#btn-left");
+            var btnRight = $("#btn-right");
+            btnLeft.click(function() {
+                change(0);
+            })
+            btnRight.click(function() {
+                change(1);
+            })
+
+            function change(dir) {
+                var arrW = [],
+                    arrH = [],
+                    arrL = [],
+                    arrT = [],
+                    arrZ = [],
+                    arrO = [];
+
+                var li = $("li");
+                li.each(function(i) {
+                    arrW[i] = $(this).css("width");
+                    arrH[i] = $(this).css("height");
+                    arrL[i] = $(this).css("left");
+                    arrT[i] = $(this).css("top");
+                    arrZ[i] = $(this).css("z-index");
+                    arrO[i] = $(this).css("opacity");
+                })
+
+
+                li.each(function(i) {
+                    var index;
+
+                    if (dir == 0) {
+                        index = i - 1;
+                        if(index<0){
+                        	index = 4;
+                        }
+                        $(this).animate({
+                            "width": arrW[index],
+                            "height": arrH[index],
+                            "left": arrL[index],
+                            "top": arrT[index],
+                            "z-index": arrZ[index],
+                            "opacity": arrO[index]
+                        }, 500)
+                    } else {
+                        index = i + 1;
+                        if(index>4){
+                        	index = 0;
+                        }
+                        $(this).animate({
+                            "width": arrW[index],
+                            "height": arrH[index],
+                            "left": arrL[index],
+                            "top": arrT[index],
+                            "z-index": arrZ[index],
+                            "opacity": arrO[index]
+                        }, 500)
+                    }
+                })
+
+            }
+
+
+        }
+        </script>
+</body>
+
+</html>

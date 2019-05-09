@@ -1,0 +1,16 @@
+
+.location{
+    width:100%;
+    height:600rpx;
+    padding-top:50rpx;
+}
+.location view{
+   line-height: 60rpx;
+   margin-left:40rpx;
+}
+.location button{
+    width:200rpx;
+    background:#E4DDCD;
+    margin:0 100rpx 100rpx 50rpx;
+   color:#fff;
+}

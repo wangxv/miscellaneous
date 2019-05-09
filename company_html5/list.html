@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<div>
+  <div class="top">
+      <div class="top_content">
+          <ul>
+              <li><a href="#"> 联系我们</a></li>
+              <li><a href="#" onclick="AddFavorite(window.location,document.title)"> 加入收藏</a></li>
+              <li><a href="#" onclick="SetHome(window.location)"> 设为首页</a></li>
+          </ul>
+
+      </div>
+  </div>
+  <!--top结束-->
+  <div class="wrap">
+    <div class="logo">
+        <div class="logo_left">
+            <img src="imgs/logo.jpg" alt="慕课网"/>
+        </div>
+        <div class="logo_right">
+            <img src="imgs/tel.jpg" alt="服务热线"/>24小时服务热线:<span class="tel" >123-456-7890</span>
+        </div>
+    </div>
+    <!--logo结束-->
+
+    <div class="clear"></div>
+    <div class="nav">
+
+        <div class="nav_left"></div>
+        <div class="nav_mid">
+            <div class="nav_mid_left">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="list.html">关于慕课</a></li>
+                    <li><a href="list.html">新闻动态</a></li>
+                    <li><a href="list.html">课程中心</a></li>
+                    <li><a href="list.html">在线课程</a></li>
+                    <li><a href="list.html">人才招聘</a></li>
+                </ul>
+            </div>
+            <div class="nav_mid_right">
+                <form action="" method="post">
+                    <input type="text" class="search_text"/>
+                </form>
+            </div>
+        </div>
+       <!-- nav_mid结束-->
+        <div class="nav_right"></div>
+    </div>
+   <!--nav 结束-->
+    <div class="ad" id="picBox" style="height:243px;">
+        <img src="imgs/ad.jpg" alt=""/>
+
+    </div>
+    <!--ad结束-->
+  <div class="list_main">
+      <div class="news_type">
+          <h2>新闻中心</h2>
+          <div class="news_type_content">
+              <ul>
+                  <li><a href="list.html">公司新闻</a></li>
+                  <li><a href="list.html">行业新闻</a></li>
+                  <li><a href="list.html">媒体报道</a></li>
+                  <li><a href="list.html">活动专题</a></li>
+                  <li><a href="list.html">精彩视频</a></li>
+                  <li><a href="list.html">资源下载</a></li>
+                  <li><a href="list.html">公司内刊</a></li>
+              </ul>
+          </div>
+      </div><!--new_type结束-->
+      <div class="list_box">
+          <h2>新闻中心</h2>
+          <div class="news_list">
+              <ul>
+                    <li><span class="date">2017-06-01</span><a href="news.html">[慕课访谈 用户篇]“有为屌丝”在路上</a></li>
+                    <li><span class="date">2017-06-01</span><a href="news.html">[有奖活动]给父亲的三行书信</a></li>
+                    <li><span class="date">2017-06-03</span><a href="news.html">《程序猿，请晒出你的童年》活动</a></li>
+                    <li><span class="date">2017-06-03</span><a href="news.html">[慕课访谈 用户篇]“有为屌丝”在路上</a></li>
+                    <li><span class="date">2017-06-04</span><a href="news.html">[有奖活动]给父亲的三行书信</a></li>
+                    <li><span class="date">2017-06-04</span><a href="news.html">[慕课访谈 用户篇]“有为屌丝”在路上</a></li>
+                    <li><span class="date">2017-06-05</span><a href="news.html">《程序猿，请晒出你的童年》活动</a></li>
+                    <li><span class="date">2017-06-06</span><a href="news.html">[有奖活动]给父亲的三行书信</a></li>
+                    <li><span class="date">2017-06-07</span><a href="news.html">[慕课访谈 用户篇]“有为屌丝”在路上</a></li>
+                    <li><span class="date">2017-06-08</span><a href="news.html">《程序猿，请晒出你的童年》活动</a></li>
+              </ul>
+          </div><!--news_list结束-->
+          <div class="page">
+              <a href="#">首页</a><a href="#">&lt;</a><a href="#" class="active">1</a><a href="#">2</a><a href="#">3</a><a href="#">…</a>
+              <a href="#">&gt;</a><a href="#">末页</a>
+          </div>
+      </div><!--list_box结束-->
+  </div>
+</div>
+  <div class="clear"></div>
+<div class="copyright">
+    <div class="copyright_content">
+        <ul>
+            <li><a href="#">关于</a>
+               <ul>
+                   <li><a href="#">品牌故事</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">版权声明</a></li>
+               </ul>
+            </li>
+            <li><a href="#">课程</a>
+                <ul>
+                    <li><a href="#">品牌故事</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">版权声明</a></li>
+                </ul>
+            </li>
+            <li><a href="#">留言</a>
+                  <ul>
+                   <li><a href="#">品牌故事</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">版权声明</a></li>
+               </ul>
+            </li>
+            <li><a href="#">关注</a>
+                  <ul>
+                   <li><a href="#">品牌故事</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">版权声明</a></li>
+               </ul>
+            </li>
+            <li><a href="#"> <img src="imgs/weixin.png" alt=""/> 微信关注</a>
+                <ul>
+                    <li><img src="imgs/qrcode.jpg" alt=""/></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

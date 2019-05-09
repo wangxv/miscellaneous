@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>本地文件操作</title>
+    <style type="text/css">
+
+        html,body{
+            height:100%;
+        }
+        body{
+            background:url("bg.jpg") no-repeat;
+            background-size:cover;
+            font-family:"Helvetica Neue",sans-serif;
+            color:#fff;
+            margin:0;
+            padding:0;
+            text-align:center;
+            position:relative;
+        }
+        #holder{
+            position:absolute;
+            width:988px;
+            height:300px;
+            line-height:300px;
+            font-size:35px;
+            font-weight:200;
+            left:50%;
+            top:50%;
+            margin-top:-150px;
+            margin-left:-490px;
+            background:rgba(0,0,0,.2);
+        }
+        #holder.hover{
+            border:3px dashed #f00;
+        }
+        #holder.normal{
+            border:3px dashed #fff;
+        }
+        #canvas{
+            position:absolute;
+            z-index:-20;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="holder" class="normal">Drop your bitmap here</div>
+
+<script type="text/javascript">
+     var holder=document.getElementById("holder");
+     var canvas=document.getElementById("canvas");
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    var ctx=canvas.getContext("2d");
+     if(window.File && window.FileReader && window.FileList && window.Blob){
+         alert("支持");
+     }
+     else{
+         alert("HTML5 File API在您的浏览器里是不完全支持的。");
+     }
+
+    holder.ondragover=function(){
+        this.className="hover";
+        return false;//阻止默认动作
+    };
+    holder.ordragend=function(){//拖动结束时
+        this.className="normal";
+        return false;
+    };
+    holder.ondrop=function(e){//拖动到上方并松开鼠标
+        this.className="normal";
+        e.preventDefault();
+        var file= e.dataTransfer.files[0];//获取到所拖拽的第一个文件
+        reader=new FileReader();//创建一个FileReader对象
+        reader.onload=function(event){//当本地文件读取完毕后调用一下函数
+            img=new Image();//创建一个Image对象
+            img.src=event.target.result;//姜读取的二进制为图数据赋予该对象
+            img.onload=function(){
+                ctx.clearRect(0,0,canvas.width,canvas.height);//清除Canvas中已有的内容
+                ctx.drawImage(this,0,0,canvas.width,canvas.height);//将Image对象显示在Canvas中
+                delete this;//删除Image对象，以释放缓存
+            }
+        };
+        reader.readAsDataURL(file);//在FileReader对象中读取文件内容
+        return false;
+    };
+
+</script>
+</body>
+</html>

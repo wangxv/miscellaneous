@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="top250Ctrl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>电影top250</title>
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../css/top205.css">
+</head>
+
+<body>
+ 
+    <div class="movie-list">
+        <ul class="movie-list-ul">
+            <li ng-repeat="x in data" class="item">
+                <div class="item-top" >
+                    <img src="{{x.images.small}}" alt="" class="item-img">
+                </div>
+                <div class="item-bottom">
+                    <div class="title">{{x.title}}</div>
+                    <div class="year">{{x.year}}</div>
+                    <ul class="directors" ng-repeat="item in x.directors">
+                        <li class="directors-item">{{item.name}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-animate.min.js"></script>
+    <script src="../public/js/app.js"></script>
+    <script src="../js/top250.js"></script>
+</body>
+
+</html>

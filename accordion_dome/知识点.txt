@@ -1,0 +1,2 @@
+初始状态：第一个li的width为550px，而第二个到第六个都为22px(li中span的宽)
+oDiv.offsetWidth=662;

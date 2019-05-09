@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>douban</title>
+    <link rel="stylesheet" href="public/css/public.css">
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background: -webkit-radial-gradient(center, white, black);
+        /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(center, white, black);
+        /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(center, white, black);
+        /* Firefox 3.6 - 15 */
+        background: radial-gradient(center, white, black);
+        /* 标准的语法 */
+    }
+    .link{
+    	font-size:20px;
+        color:#fff;
+    }
+    .book {
+        width: 200px;
+        height: 200px;
+      
+        border-radius: 50%;
+     
+        line-height:200px;
+        text-align:center;
+        background: -webkit-radial-gradient(center, #81ED0A, #4B791A);
+        /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(center, #81ED0A, #4B791A);
+        /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(center, #81ED0A, #4B791A);
+        /* Firefox 3.6 - 15 */
+        background: radial-gradient(center, #81ED0A, #4B791A);
+        /* 标准的语法 */
+    }
+
+    .top250 {
+    	width: 200px;
+        height: 200px;
+        border-radius: 50%;
+       
+        line-height:200px;
+        text-align:center;
+        background: -webkit-radial-gradient(center, #05C9FA, #0540FA);
+        /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(center, #05C9FA, #0540FA);
+        /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(center,#05C9FA , #0540FA);
+        /* Firefox 3.6 - 15 */
+        background: radial-gradient(center, #05C9FA, #0540FA);
+        /* 标准的语法 */
+    }
+
+    .in_theaters {
+    	width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        
+        line-height:200px;
+        text-align:center;
+        background: -webkit-radial-gradient(center, #D16C6F, #ED080D);
+        /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(center, #D16C6F, #ED080D);
+        /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(center, #D16C6F, #ED080D);
+        /* Firefox 3.6 - 15 */
+        background: radial-gradient(center, #D16C6F, #ED080D);
+        /* 标准的语法 */
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="book"><a class="link" href="views/book.html">搜索图书</a></div>
+        <div class="top250"><a class="link" href="view/top250.html">电影排行</a></div>
+        <div class="in_theaters"><a class="link" href="view/in_theaters.html">正在热映</a></div>
+    </div>
+
+
+    <script src="lib/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+
+    		var height = $(window).height();
+    		var width = $(window).width();
+    		var book = $(".book");
+    		var top250 = $(".top250");
+    		var in_theaters = $(".in_theaters");
+
+    		book.css({
+              "margin-left":width*0.02*(Math.random()*10)+"px",
+              "margin-top":height*0.01*(Math.random()*10)+"px"
+    		})
+    		top250.css({
+               "margin-left":width*0.02*(Math.random()*10)+"px",
+               "margin-top":height*0.01*(Math.random()*10)+"px"
+    		})
+    		in_theaters.css({
+                "margin-left":width*0.02*(Math.random()*10)+"px",
+                "margin-top":height*0.01*(Math.random()*10)+"px"
+    		})
+    	})
+    </script>
+</body>
+
+</html>

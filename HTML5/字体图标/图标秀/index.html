@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图标秀</title>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <style>
+        #content{
+            width:186px;
+            height:186px;
+            margin:50px auto;
+            overflow: hidden;
+            position:relative;
+        }
+        #animate{
+            position:absolute;
+            top:0;
+            left:0;
+            opacity: 0.4;
+        }
+        @font-face{
+            font-family: "icon";
+            src: url("../Font/IcoMoon-Free.ttf"); /* IE9 兼容模式 */
+            font-weight: normal;
+            font-style: normal;
+        }
+        .face{
+            font-family:"icon";
+            font-size:176px;
+            padding:5px;
+            float:left;
+            left:0;
+            top:0;
+            z-index:0;
+        }
+        #button,#off{
+            margin:100px auto;
+            display:block;
+            width:100px;
+            height:40px;
+            line-height: 40px;
+            border-radius:10px;
+            background:black;
+            color:white;
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="animate">
+        <div class="face">&#xe9e0</div>
+        <div class="face">&#xe9e2</div>
+        <div class="face">&#xe9e4</div>
+        <div class="face">&#xe9e6</div>
+        <div class="face">&#xe9e8</div>
+        <div class="face">&#xe9ea</div>
+        <div class="face">&#xe9ec</div>
+        <div class="face">&#xe9ee</div>
+        <div class="face">&#xe9f0</div>
+        <div class="face">&#xe9f2</div>
+        <div class="face">&#xe9f4</div>
+        <div class="face">&#xe9f6</div>
+        <div class="face">&#xe9f8</div>
+        <div class="face">&#xe9fa</div>
+        <div class="face">&#xe9fc</div>
+        <div class="face">&#xe9fe</div>
+        <div class="face">&#xea00</div>
+        <div class="face">&#xea02</div>
+    </div>
+</div>
+<button value="动画开始" id="button">动画开始</button>
+<button value="动画开始" id="off">动画结束</button>
+<script type="text/javascript">
+    var content=$("#content");
+    var divs=$("div.face");
+    var button=$("button");
+    var anim=$("#animate");
+    var off=$("#off");
+    var mark="-";
+    var timer;
+    var colors=["red","green","yellow","aquamarine","aqua","fuchsia","darkorchid",
+    "royalblue","chartreuse"];
+    for(var i=0;i<divs.length;i++){
+        var round=Math.floor(Math.random(0,1)*10);
+        divs[i].style.color=colors[round];
+    }
+   console.log(anim.position().top) ;
+     button.click(function(){
+         setInterval(function(){
+             if(parseInt(anim.position().top)<=-3162){
+                 mark="+";
+             }else if(parseInt(anim.position().top)>=0){
+                mark="-";
+             }
+             anim.animate({
+                 top:mark+"=186px",
+                 opacity:1
+             })
+         },1000);
+    });
+
+
+    function Animate(elem){
+            if(parseInt(elem.position().top)<=-3162){
+                console.log(elem.position().top);
+                elem.animate({
+                    top:"0px"
+                })
+            }else{
+                console.log(elem.position().top);
+                elem.animate({
+                    top:"-=186px"
+                })
+            }
+    }
+</script>
+</body>
+</html>

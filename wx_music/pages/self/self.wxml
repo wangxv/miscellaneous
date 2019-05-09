@@ -1,0 +1,5 @@
+<view class="location" style="background:url(../imgs/bg4.jpg)">
+   <button bindtap="getLocation">获取当前位置</button>
+   <view>经度：{{location.lat}}</view>
+   <view>纬度：{{location.lon}}</view>
+</view>

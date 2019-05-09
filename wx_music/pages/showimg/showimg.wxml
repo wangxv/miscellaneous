@@ -1,0 +1,13 @@
+<view class="{{!show?'block':'none'}}">
+  <block wx:for="{{imglist}}">
+    <image src="{{item}}" bindtap="animate" data-src="{{item}}"></image> 
+  </block>
+  <block wx:for="{{newimg}}">
+     <image src="{{item}}" bindtap="animate" data-src="{{item}}"></image> 
+  </block>
+
+    <button bindtap="getimg">从本地相册获取图片</button>
+</view>
+<view class="showimg {{show?'block':'none'}}" bindtap="goback">
+        <image src="{{showsrc}}"></image>
+</view>

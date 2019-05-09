@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phoneBook">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="public/css/public.css">
+    <link rel="stylesheet" href="public/css/index.css">
+</head>
+
+<body>
+    <div id="phonebook">
+        <!-- 联系人列表 -->
+        <div ng-controller="listCtrl" ng-include="'view/list/list.html'"></div>
+        <!-- 新建联系人按钮-->
+        <div class="addperson" ng-click="addperson" >
+            新建联系人
+        </div>
+        <!-- 侧边栏 -->
+        <div ng-controller="sidebarCtrl" class="sidebar" ng-include="'view/sidebar/sidebar.html'">
+        </div>
+        <!-- 用户详情 -->
+        <div ng-controller="detailCtrl" ng-include="'view/detail/detail.html'"></div>
+        <!-- 新建联系人弹窗 -->
+        <div ng-controller="addpersonCtrl" ng-include="'view/addperson/addperson.html'"></div>
+    </div>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/angularjs.min.js"></script>
+    <script src="public/js/data1.js"></script>
+    <script src="public/js/fun.js"></script>
+    <script src="app.js"></script>
+    <script src="view/list/list.js"></script>
+    <script src="view/sidebar/sidebar.js"></script>
+    <script src="view/addperson/addperson.js"></script>
+    <script src="view/detail/detail.js"></script>
+        <script src="ininial.js"></script>
+</body>
+</html>

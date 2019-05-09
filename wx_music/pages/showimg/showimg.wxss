@@ -1,0 +1,26 @@
+image{
+    width:200rpx;
+    height:200rpx; 
+    border-radius:10rpx;
+    margin:20rpx;
+}
+
+button{
+    background:#F7E0F7;
+}
+.showimg{
+    width:100%;
+    height:900rpx;
+    display:none;
+    
+}
+.showimg image{
+    width:100%;
+    height:500rpx;
+}
+.block{
+    display:block;
+}
+.none{
+    display:none;
+}
