@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/public.css"/>
+    <link rel="stylesheet" href="/public/css/admin_form.css"/>
+</head>
+<body>
+
+<div class="article">
+    <div class="articleadd">
+        <form method="post">
+            <div class="articlename clearfix"><span>文章名</span><input type="text" id="articlename" name="articlename" value="{{content.articlename}}"/></div>
+            <div class="articlecategory clearfix">
+                <span>所属图书</span>
+                <select name="book" id="book" class="form-control">
+                    {% for book in books%}
+                   {%if content.bookcategory.toString() == book._id.toString()%}
+                    <option value="{{book._id.toString()}}" selected>{{book.bookname}}</option>
+                    {%else%}
+                    <option value="{{book._id.toString()}}">{{book.bookname}}</option>
+                    {%endif%}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="articleinfo clearfix">
+                <span>内容</span> <textarea name="articleinfo" id="articleinfo" >{{content.articleinfo}}</textarea>
+            </div>
+            <button type="submit" class="articlebtn">提交</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

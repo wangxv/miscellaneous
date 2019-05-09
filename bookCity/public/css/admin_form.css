@@ -1,0 +1,200 @@
+
+.bookadd{
+    margin:0 auto;
+    background:linear-gradient(#5BB1F3,#0022dd);
+    width:600px;
+    height:630px;
+    font-size:20px;
+    color:#fff;
+    border-radius: 20px;
+    padding-top:40px;
+    box-shadow: 4px 2px 21px #0022dd;
+}
+.bookname,.bookcategory,.bookinfo{
+   margin:10px;
+}
+.bookadd #bookname,.bookadd #categoryname{
+    width:380px;
+    height:50px;
+    font-size:20px;
+    border-radius:20px;
+    border:none;
+    padding-left:20px;
+    box-shadow: 4px 2px 21px #0022dd;
+    background:#FFCCEE;
+    float:left;
+    color:#fff;
+}
+.bookadd span{
+    display:block;
+    float:left;
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background:#E75C77;
+    color:#fff;
+    padding:10px;
+    border-radius:10px;
+    margin-right:10px;
+    box-shadow: 5px 5px 5px #0022dd;
+}
+#category{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius:20px;
+    font-size:20px;
+    padding:0 20px;
+    box-shadow: 4px 2px 21px #0022dd;
+    background:#FFCCEE;
+    color:#fff;
+    /*float:left;*/
+    /*display:block;*/
+}
+
+#description{
+    display:block;
+    width:380px;
+    height:300px;
+    float:left;
+    border:1px solid #0022dd;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0022dd;
+    background:#FFCCEE;
+    color:#fff;
+    font-size:20px;
+    padding-left:20px;
+}
+.bookbtn{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background:#E75C77;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0022dd;
+    color:#fff;
+    font-size:20px;
+    margin-left:140px;
+}
+
+
+
+
+/*文章*/
+
+.articleadd{
+    margin:0 auto;
+    background:linear-gradient(#5BB1F3,#0022dd);
+    width:600px;
+    height:600px;
+    font-size:20px;
+    color:#fff;
+    border-radius: 20px;
+    padding-top:40px;
+    box-shadow: 4px 2px 21px #0022dd;
+}
+.articlename,.articlecategory,.articleinfo{
+    margin:10px;
+}
+.articleadd #articlename,.articleadd #categoryname{
+    width:380px;
+    height:50px;
+    font-size:20px;
+    border-radius:20px;
+    border:none;
+    padding-left:20px;
+    box-shadow: 4px 2px 21px #0022dd;
+    background:#FFCCEE;
+    float:left;
+    color:#fff;
+}
+.articleadd span{
+    display:block;
+    float:left;
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background:#E75C77;
+    color:#fff;
+    padding:10px;
+    border-radius:10px;
+    margin-right:10px;
+    box-shadow: 5px 5px 5px #0022dd;
+}
+#bookcategory{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius:20px;
+    font-size:20px;
+    padding:0 20px;
+    box-shadow: 4px 2px 21px #0022dd;
+    background:#FFCCEE;
+    color:#fff;
+    /*float:left;*/
+    /*display:block;*/
+}
+#book{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius:20px;
+    font-size:20px;
+    padding:0 20px;
+    box-shadow: 4px 2px 21px #0022dd;
+    background:#FFCCEE;
+    color:#fff;
+    /*float:left;*/
+    /*display:block;*/
+}
+
+#articleinfo{
+    display:block;
+    width:380px;
+    height:300px;
+    float:left;
+    border:1px solid #0022dd;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0022dd;
+    background:#FFCCEE;
+    color:#fff;
+    font-size:20px;
+    padding-left:20px;
+}
+.articlebtn{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background:#E75C77;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0022dd;
+    color:#fff;
+    font-size:20px;
+    margin-left:140px;
+}
+
+#show_image img{
+
+    width:100px;
+    height:100px;
+    box-shadow:3px 0px 5px #0022dd;
+    border-radius:5px;
+}
+.upload_img input{
+    width:100px;
+    height:50px;
+    display:block;
+    border:none;
+    background:#E75C77;
+    margin:2px 30px;
+    color:white;
+    border-radius:5px;
+    box-shadow:3px 0px 5px #0022dd;
+}

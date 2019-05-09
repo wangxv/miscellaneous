@@ -1,0 +1,30 @@
+//1.初始化项目
+    npm init
+
+
+2.安装第三方依赖
+express    node框架
+mongoose   数据库
+swig       前端模板引擎
+body-paarser node中间件  在req.body属性下可用的处理程序之前解析中间件中的传入请求正文。
+
+cookies   cookies操作
+markdown  解析markdown语法
+
+
+3.文件结构
+routers 路由部分处理
+models  数据库模型文件
+schemas 数据库结构文件
+views  模板试图文件
+public  公共文件
+app.js   入口文件
+
+
+4.项目相关
+    书有分类
+    每本书有很多文章
+
+
+
+

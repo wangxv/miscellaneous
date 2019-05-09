@@ -1,0 +1,33 @@
+{%extends 'layout.html'%}
+
+{% block content %}
+<div class="">
+    <div class="user-title"></div>
+    <div class="list flex-cc">
+        <ul>
+            <li class="list-row clearfix">
+                <ul>
+                    <li class="list-col">用户ID</li>
+                    <li class="list-col">用户名</li>
+                    <li class="list-col">是否是管理员</li>
+                </ul>
+            </li>
+            {%for userlist in userlists%}
+            <li class="list-row clearfix">
+                <ul>
+                    <li class="list-col">{{userlist._id.toString()}}</li>
+                    <li class="list-col">{{userlist.username}}</li>
+                    {% if userlist.isAdmin%}
+                    <li class="list-col">是</li>
+                    {%else%}
+                    <li class="list-col">否</li>
+                    {%endif%}
+
+                </ul>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

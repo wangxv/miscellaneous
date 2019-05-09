@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="/public/css/public.css"/>
+    <link rel="stylesheet" href="/public/css/admin.css"/>
+    <link rel="stylesheet" href="/public/css/alert.css"/>
+</head>
+<body>
+<div class="admin-nav">
+    <ul>
+        <li>
+            <a href="/">首页</a>
+        </li>
+        <li>
+            <a href="/admin/userMessage">用户管理</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                图书管理
+                <i class="sjbgs"></i>
+            </a>
+            <div class="popup">
+                <div class="popup-item"><a href="/admin/book_message">图书管理首页</a></div>
+                <div class="popup-item"><a href="/admin/category_message">图书分类首页</a></div>
+                <div class="popup-item"><a href="/admin/category_add">添加图书分类</a></div>
+                <div class="popup-item"><a href="/admin/book_message/book_add">添加图书</a></div>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                文章管理
+                <i class="sjbgs"></i>
+            </a>
+            <div class="popup">
+                <div class="popup-item"><a href="/admin/article_message">文章管理首页</a></div>
+                <div class="popup-item"><a href="/admin/article_message/add">添加文章</a></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div>
+    {%block content%}{% endblock %}
+</div>
+<script src="/public/js/jquery-1.12.4.min.js"></script>
+<script src="/public/js/common.js"></script>
+<script src="/public/js/admin.js"></script>
+</body>
+</html>

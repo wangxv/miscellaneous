@@ -1,0 +1,38 @@
+
+.flex-center{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items:center;
+}
+.pager{
+    width:100%;
+    margin:0 auto;
+}
+.pager li{
+    display:block;
+    padding:10px;
+    text-align:center;
+}
+.pager .previous{
+    width:10%;
+}
+.pager .info{
+    text-align:center;
+    width:80%;
+
+}
+.pager .next{
+    width:10%;
+}
+.pager .previous a,.pager .next a{
+    display:block;
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    color:#fff;
+    border-radius:5px;
+    background:#00D00D;
+    padding: 0;
+}

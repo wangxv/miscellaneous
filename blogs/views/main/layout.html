@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="/public/js/jquery-1.12.4.min.js"></script>
+    <script src="/public/js/index.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    {% if userInfo._id%}
+    <div class="detail-main">
+        <div class="detail-nav clearfix">
+            {% if userInfo.isAdmin %}
+            <div class="na-title">欢迎{{userInfo.username}}进入博客,你是管理员</div>
+            <a href="/admin" class="message">进入管理</a>
+            {%else%}
+            <div class="na-title">欢迎{{userInfo.username}}进入博客</div>
+            {%endif%}
+            <div class="na-exit">退出</div>
+            <div class="username">{{userInfo.username}}</div>
+
+        </div>
+        <div class="detail-content">
+            <ul class="con-nav flex-center">
+                {% if category == '' %}
+                <li class="nav-item "><a href="/" class="focus">首页</a></li>
+                {% else %}
+                <li class="nav-item"><a href="/">首页</a></li>
+                {% endif %}
+
+                {% for cate in categories%}
+                {% if category == cate.id %}
+                <li class="nav-item"><a href="/?category={{cate.id}}" class="focus">{{cate.name}}</a></li>
+                {% else %}
+                <li class="nav-item"><a href="/?category={{cate.id}}">{{cate.name}}</a></li>
+                {% endif %}
+
+                {% endfor %}
+            </ul>
+        </div>
+          <div>
+              {% block content %}{%endblock%}
+
+          </div>
+
+        <div class="detail-footer"></div>
+    </div>
+    {% else %}
+
+    <div class="log-main">
+        <div class="log-title">用户登录</div>
+        <div class="log-line"></div>
+       <input type="text" class="log-username" placeholder="请输入用户名"/>
+        <input type="password" class="log-password" placeholder="请输入密码"/>
+        <div class="log-login">登录</div>
+        <div class="left-line"></div>
+        <div class="log-register">注册</div>
+        <div class="right-line"></div>
+        <div class="result"></div>
+    </div>
+
+    <div class="reg-main">
+        <div class="reg-title">用户注册</div>
+        <div class="reg-line"></div>
+        <input type="text" class="reg-username" placeholder="请输入用户名"/>
+        <input type="password" class="reg-password" placeholder="请输入密码"/>
+         <input type="password" class="reg-repassword" placeholder="重复密码"/>
+        <div class="reg-register">注册</div>
+        <div class="left-line"></div>
+        <div class="reg-login">登录</div>
+        <div class="right-line"></div>
+        <div class="result"></div>
+    </div>
+
+    {% endif %}
+</div>
+</body>
+</html>

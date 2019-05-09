@@ -1,0 +1,41 @@
+
+.error{
+    background:url("/public/imgs/error.png")no-repeat;
+}
+.success{
+    background:url("/public/imgs/success.png")no-repeat;
+}
+
+.panel-heading{
+    width:300px;
+    height:150px;
+    margin:0 auto;
+}
+
+.backbtn{
+    margin:10px auto;
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(#5BB1F3,#0022dd);
+    border-radius: 15px;
+    box-shadow: 2px 2px 13px #0022dd;
+
+}
+.message{
+    display: block;
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    background: #E75C77;
+    color: #fff;
+    padding: 50px 0;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}

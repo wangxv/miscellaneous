@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/public/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="/public/css/admin.css"/>
+    <link rel="stylesheet" href="/public/css/page.css"/>
+    <script src="/public/js/jquery-1.12.4.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/admin.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+    <!--顶部导航-->
+    <div class="top-nav">
+        <div class="title">后台管理</div>
+        <a href="/admin/user" class="user-message">用户管理</a>
+        <div class="dropdown">
+            <a href="/admin/category" class="user-message dropdown-toggle"
+               data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                分类管理 <span class="caret"></span></a>
+            <ul class="dropdown-menu category-menu">
+                <li><a href="/admin/category">分类首页</a></li>
+                <li><a href="/admin/category/add">添加分类</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <a href="/admin/content" class="user-message dropdown-toggle"
+               data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                内容管理 <span class="caret"></span></a>
+            <ul class="dropdown-menu content-menu">
+                <li><a href="/admin/content">内容首页</a></li>
+                <li><a href="/admin/content/add">添加内容</a></li>
+            </ul>
+        </div>
+
+        <div class="user">
+            <a href="#">{{username}}</a>
+            <a href="#" class="exit">退出</a>
+        </div>
+    </div>
+
+
+    <div class="main-message">
+        {%block main%}{%endblock %}
+    </div>
+</div>
+
+
+</body>
+</html>

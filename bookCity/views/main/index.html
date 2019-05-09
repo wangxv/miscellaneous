@@ -1,0 +1,51 @@
+{% extends 'loginRegister.html' %}
+
+{% block content %}
+   <div id="book-index">
+       <div class="detail-nav clearfix">
+           {% if userInfo.isAdmin %}
+           <div class="na-title">欢迎{{userInfo.username}}进入博客,你是管理员</div>
+           <a href="/admin" class="message">进入管理</a>
+           {%else%}
+           <div class="na-title">欢迎{{userInfo.username}}进入博客</div>
+           {%endif%}
+           <div class="na-exit">退出</div>
+           <div class="username">{{userInfo.username}}</div>
+       </div>
+
+       <div class="book-content">
+           <div class="con-nav">
+                <ul>
+                    {%for category in categories%}
+                    <li><a href="/category?id={{category._id}}">{{category.name}}</a></li>
+                    {%endfor%}
+                </ul>
+           </div>
+           <div class="con-center">
+                 <div class="center-row">
+                     {%for book in books%}
+                     <dl>
+                         <dt>
+                             <div class="box-3d">
+                                 <div class="box-3d-content">
+                                     <img src={{book.book_imgurl}} alt=""/>
+                                     <img src={{book.book_imgurl}} alt=""/>
+                                     <img src={{book.book_imgurl}} alt=""/>
+                                     <img src={{book.book_imgurl}} alt=""/>
+                                     <img src={{book.book_imgurl}} alt=""/>
+                                 </div>
+                              </div>
+                         </dt>
+                         <dd>
+                             <p>{{book.bookname}}</p>
+                             <p>{{book.book_type.name}}</p>
+                         </dd>
+                     </dl>
+                     {%endfor%}
+                 </div>
+           </div>
+       </div>
+
+   </div>
+
+{% endblock %}

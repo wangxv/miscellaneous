@@ -1,0 +1,28 @@
+{
+  "name": "book_city",
+  "version": "1.0.0",
+  "description": "书香飘扬",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangxv/bookCity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangxv/bookCity/issues"
+  },
+  "homepage": "https://github.com/wangxv/bookCity#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookies": "^0.7.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "markdown": "^0.5.0",
+    "mongoose": "^5.0.15",
+    "swig": "^1.4.2"
+  }
+}

@@ -1,0 +1,31 @@
+{%extends 'layout.html'%}
+
+{% block content %}
+<div class="">
+    <div class="category-title"></div>
+    <div class="list flex-cc">
+        <ul>
+            <li class="list-row clearfix">
+                <ul>
+                    <li class="list-col">图书ID</li>
+                    <li class="list-col">分类名</li>
+                    <li class="list-col">操作</li>
+                </ul>
+            </li>
+            {%for category in categories%}
+            <li class="list-row clearfix">
+                <ul>
+                    <li class="list-col">{{category._id.toString()}}</li>
+                    <li class="list-col">{{category.name}}</li>
+                    <li class="list-col flex-cc">
+                        <a href="category_message/delete?id={{category._id.toString()}}" class="handle-delete">删除</a>
+                        <a href="category_message/edit?id={{category._id.toString()}}" class="handle-alert">修改</a>
+                    </li>
+                </ul>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

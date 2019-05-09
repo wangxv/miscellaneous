@@ -1,0 +1,25 @@
+
+
+{% extends 'layout.html'%}
+{% block content %}
+
+
+<div class="panel panel-default">
+    <div class="panel-heading error">
+    </div>
+    <div class="panel-body message">{{message}}
+
+        <div class="panel-footer">
+            {% if url%}
+            <a href="{{url}}" >点击这里跳转</a>
+            {% else %}
+            <a href="javscript:window.history.back();" class="backbtn">返回上一步</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
